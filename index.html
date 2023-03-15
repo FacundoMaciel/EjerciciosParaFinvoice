@@ -14,39 +14,47 @@
     </header>
     <script src="app.js"></script>
     <div>
+        <!-- Inputs para recibir el primer y el segundo número y asi poder realizar las operaciones -->
         <input id="num1" type="number" min="0" step="1" onkeydown="inputControl(event)" placeholder="Primer valor" />
         <input id="num2" type="number" min="0" step="1" onkeydown="inputControl(event)" placeholder="Segundo valor" />
         <select id="oper" style="cursor: pointer;">
+            <!-- Operaciones que se pueden realizar -->
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">*</option>
             <option value="/">/</option>
         </select>
-
+        <!-- Botón para disparar el evento a realizar -->
         <button id="calcular" style="cursor: pointer;">Calcular</button>
+        <!-- Funciones -->
         <script>
+            // Capturar por ID el boton e indicarle el evento "click"
             document.querySelector("#calcular").addEventListener("click", () => {
+                // Guardar en una variable constante el valor capturado por ID de los inputs y pasarlos a números enteros
                 const num1 = parseInt(document.querySelector("#num1").value);
                 const num2 = parseInt(document.querySelector("#num2").value);
+                // Guardar en una variable constante la operación a realizar
                 const op = (document.querySelector("#oper").value);
                 let res;
-                if (op == "+") {
+                // Condiciones para realizar cada operación
+                if (op == "+") { //suma
                     res = num1 + num2;
                 }
-                else if (op == "-") {
+                else if (op == "-") { //resta
                     res = num1 - num2;
                 }
-                else if (op == "*") {
+                else if (op == "*") { //multiplicación
                     res = num1 * num2
                 }
-                else if (op == "/") {
+                else if (op == "/") { //división
                     res = num1 / num2
                 }
+                // Imprimir en pantalla el resultado de la operación capturado por ID
                 document.querySelector("#resultado").innerHTML = res
             })
         </script>
-
     </div>
+    <!-- Resultado que se muestra en pantalla -->
     <div>
         <p style="color: green;">Resultado: <h3 id="resultado" style="color: green;"></h3></p>
     </div>
