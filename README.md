@@ -46,4 +46,12 @@ Copiar el enlace del archivo index.html y abrir en su navegador o simplemente ar
   ];
   
 ```
+
+* Para resolver el primer ejercicio se implemento un ciclo for iniciado en 101, que aumenta de a 2 e indicando su limite en 150. Finalmente imprimir por consola mediante console.log mi variable iteradora "i"
  
+* Para el segundo ejercicio se utilizaron inicialmente dos inputs para los números con los cuales se realizan las operaciones, un tag select con options para cada tipo de operación solicitada ( + - * / ), un botón "calcular" con el cual se dispara el evento es decir el ejercicio matemático. Se utilizó el método querySelector de JS para capturar por ID al botón, agregandole también un addEventListener para registrar el evento "click", se agrega como segundo parámetro de este método una función callback, dentro de ésta se capturan los valores de los dos inputs por ID mediante querySelector (num1 y num2) como tambien la operación a realizar (op) y el resultado (res). Con una serie de condicionales if y else if se indica que ejercicio matemático corresponde y se reasigna a res con el resultado de éste.
+ Para imprimir por pantalla el resultado se captura un tag h3 por ID con un querySelector y aplicando el método innerHTML se establece el nuevo elemento.
+
+* El tercer ejercicio está definido como comentario en el archivo app.js 
+
+* Para el último ejercicio se utilizó una variable y el método filter de arrays y así almacenar dentro de ésta los vehículos que cumplen las condiciones establecidas en la función. Finalmente solo imprimir por consola con console.log mi array filtrado.
